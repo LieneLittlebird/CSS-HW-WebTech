@@ -1,0 +1,324 @@
+/*Info about the author 
+name: Liene Putniņa
+student ID number: lr12022
+*/
+
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto);
+}
+
+body {
+  min-width: 1500px;
+  width: auto;
+  font-family: "Roboto", sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#top-menu {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: #0e0223cc;
+  padding: 10px;
+  font-size: 16.8px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+ul.parent-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* Replace margins with other */
+}
+
+ul li.sub-menu-caption {
+  display: flex;
+  color: #f2b11a;
+}
+
+ul li.sub-menu-caption.upper-menu.active {
+  display: flex;
+  align-items: center;
+}
+
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  background-color: #0e0223cc;
+  color: #ffffff;
+  height: 130px;
+  width: 130px;
+  padding: 15px 10px 10px 5px;
+  /* Replace h/w with other */
+}
+
+ul.sub-menu a {
+  margin: 5px;
+}
+
+ul li.sub-menu-caption.upper-menu.active:hover .sub-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon.collapse {
+  display: none;
+  margin: 2px;
+}
+
+ul li.sub-menu-caption.upper-menu.active:hover .icon.collapse {
+  display: block;
+}
+
+ul li.sub-menu-caption.upper-menu.active:hover .icon.expand {
+  display: none;
+}
+
+.icon.expand {
+  margin: 2px;
+}
+
+ul li.upper-menu {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* Replace margins with other */
+}
+
+ul li.upper-menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul li.upper-menu a:hover {
+  color: #f2b11a;
+  text-decoration: none;
+}
+
+ul li.upper-menu.right {
+  margin-left: auto;
+}
+
+ul li.upper-menu.right a.btn {
+  background-color: #f2d51acc;
+  border: 2px solid #ffffff;
+  border-radius: 32px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 20px;
+  /* Replace margins with other */
+}
+
+section.header {
+  height: 100vh;
+  background-image: url("/images/topimage.jpeg");
+  color: #ffffff;
+}
+
+section.header div.bg-overlay {
+  height: 100vh;
+  background: #0e02238c;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  position: relative;
+}
+
+section.header div.title {
+  margin: 30px 30px 70px 30px;
+}
+
+section.header div.title h1 {
+  font-size: 72px;
+}
+
+.meta {
+  position: absolute;
+  right: 30px;
+}
+
+.meta ul {
+  display: flex;
+  margin-bottom: 10px;
+}
+.meta ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  font-size: 14px;
+  width: max-content;
+  height: 35px;
+  padding-right: 7px;
+  margin: 6px;
+  /* Replace margins with other */
+}
+.meta ul li span {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  font-size: 11.2px;
+  text-transform: uppercase;
+  background-color: #f2d51acc;
+  border-radius: 24px;
+  margin-right: 5px;
+  /* Replace margins with other */
+  padding: 2px;
+  height: 35px;
+  width: 35px;
+}
+
+.social {
+  position: absolute;
+  top: 110px;
+  right: 30px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.social h5 {
+  font-size: 18px;
+  opacity: 80%;
+  margin-right: 10px;
+}
+
+.social-btns a img {
+  opacity: 60%;
+  height: 20px;
+  width: 20px;
+}
+
+section.section-summary {
+  margin: 4em;
+}
+
+h2.text-center.upper {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+section.section-summary p {
+  text-align: justify;
+  font-size: 18px;
+  color: #848484;
+  line-height: 1.5;
+}
+
+section.section-summary p span {
+  font-style: italic;
+}
+
+section.section-cast {
+  height: 100vh;
+  min-height: 680px;
+  background-image: url("/images/car.jpg");
+}
+
+section.section-cast div.bg-overlay {
+  background: #0e02238c;
+  height: 100vh;
+  position: relative;
+}
+
+.section-cast div.bg-overlay ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px;
+  margin-top: 100px;
+  /* replace margins */
+}
+.section-cast div.bg-overlay ul li {
+  display: inherit;
+}
+
+section.section-cast div.bg-overlay ul li a {
+  position: relative;
+  height: 50vh;
+}
+
+section.section-cast div.bg-overlay ul li a img {
+  height: 50vh;
+  /* When the browser window gets wider than 
+  1500px the distance between crew images must be 
+  proportionally enlarged (Hint: use flexbox module to 
+  implement this). */
+}
+
+.section-cast div.bg-overlay h4.text-center.upper {
+  font-size: 42px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 65px;
+  /* fix this janky thing */
+}
+
+.section-cast div.bg-overlay span.line {
+  position: absolute;
+  top: 10%;
+  top: 5%;
+  left: 49%;
+  right: 50%;
+  width: 40px;
+  color: red;
+  border: 1px solid white;
+  margin-bottom: 5px;
+  /* fix this janky solution*/
+}
+
+a div.cast-head {
+  color: #ffffffcc;
+  font-size: 14px;
+  background-color: #f2d51acc;
+  height: 5%;
+  width: 20%;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.cast-text {
+  background-color: #ffffffcc;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px;
+  height: 10%;
+  width: 88.5%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.cast-text h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+
+.cast-text p {
+  font-size: 14px;
+  color: #848484;
+}
+
+section.section-cast div.bg-overlay ul li a {
+  text-decoration: none;
+}
+
+section.section-trailer text-center {
+  /* display: flex;
+  justify-content: center; */
+  height: 100vh;
+  min-height: 950px;
+}
