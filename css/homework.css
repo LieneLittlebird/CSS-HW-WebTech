@@ -9,8 +9,8 @@ student ID number: lr12022
 }
 
 body {
-  min-width: 1500px;
-  width: auto;
+  /* min-width: 1500px; */
+  width: 100vw;
   font-family: "Roboto", sans-serif, Arial, Helvetica;
   font-size: 14px;
   cursor: pointer;
@@ -115,15 +115,23 @@ ul li.upper-menu.right a.btn {
   /* Replace margins with other */
 }
 
+.bg-overlay {
+  background: #0e02238c;
+}
+
 section.header {
   height: 100vh;
+  width: 100%;
   background-image: url("/images/topimage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
   color: #ffffff;
 }
 
 section.header div.bg-overlay {
   height: 100vh;
-  background: #0e02238c;
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
@@ -223,11 +231,13 @@ section.section-cast {
   height: 100vh;
   min-height: 680px;
   background-image: url("/images/car.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
 }
 
 section.section-cast div.bg-overlay {
-  background: #0e02238c;
-  height: 100vh;
+  height: 84.3vh;
+  /* fix this */
   position: relative;
 }
 
@@ -249,6 +259,7 @@ section.section-cast div.bg-overlay ul li a {
 
 section.section-cast div.bg-overlay ul li a img {
   height: 50vh;
+  /* width: 100%; */
   /* When the browser window gets wider than 
   1500px the distance between crew images must be 
   proportionally enlarged (Hint: use flexbox module to 
@@ -281,7 +292,7 @@ a div.cast-head {
   color: #ffffffcc;
   font-size: 14px;
   background-color: #f2d51acc;
-  height: 5%;
+  height: 4%;
   width: 20%;
   text-align: center;
   padding-top: 5px;
@@ -300,6 +311,7 @@ a div.cast-head {
   position: absolute;
   bottom: 0px;
   left: 0px;
+  right: 0;
 }
 .cast-text h5 {
   font-size: 18px;
@@ -317,8 +329,99 @@ section.section-cast div.bg-overlay ul li a {
 }
 
 section.section-trailer text-center {
-  /* display: flex;
-  justify-content: center; */
   height: 100vh;
   min-height: 950px;
+  position: relative;
+  margin: 20px;
+}
+
+section.section-trailer.text-center h2.upper {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section.section-trailer.text-center ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.section-trailer.text-center ul li ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/* section.section-trailer.text-center ul li iframe {
+  /* make it better */
+/* width: 300px; */
+/* } */
+
+section.section-trailer.text-center ul li ul li {
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+section.section-trailer.text-center ul li ul li a {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+section.section-tickets.text-center {
+  height: 20vh;
+  background-image: url("/images/cinema.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+section.section-tickets.text-center div.bg-overlay {
+  background-color: #0e022380;
+  display: flex;
+  justify-content: center;
+  /* fix this */
+}
+
+h4.text-center-upper {
+  color: #ffffff;
+}
+
+section.section-tickets.text-center div.bg-overlay a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f2d51acc;
+  border: 2px solid #ffffff;
+  border-radius: 32px;
+  padding: 5px 10px 5px 10px;
+}
+
+.section-footer ul {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.section-footer ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #888888;
+  padding: 10px;
+}
+
+.section-footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.ul-footer {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.ul-footer li {
+  border-right: 1px solid #b5b5b5;
+  height: 15px;
 }
