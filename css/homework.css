@@ -9,8 +9,8 @@ student ID number: lr12022
 }
 
 body {
-  /* min-width: 1500px; */
-  width: 100vw;
+  min-width: 1500px;
+  width: 100%;
   font-family: "Roboto", sans-serif, Arial, Helvetica;
   font-size: 14px;
   cursor: pointer;
@@ -20,11 +20,13 @@ body {
   position: fixed;
   width: 100%;
   top: 0px;
+  left: 0px;
   background-color: #0e0223cc;
   padding: 10px;
   font-size: 16.8px;
   color: #ffffff;
   vertical-align: middle;
+  z-index: 100;
 }
 
 ul.parent-menu {
@@ -134,6 +136,7 @@ section.header {
   background-image: url("/images/topimage.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   overflow: hidden;
   color: #ffffff;
 }
@@ -217,7 +220,7 @@ section.header div.title h1 {
   opacity: 100%;
 }
 section.section-summary {
-  margin: 4em;
+  padding: 4em;
 }
 
 h2.text-center.upper {
@@ -244,13 +247,16 @@ section.section-cast {
   min-height: 680px;
   background-image: url("/images/car.jpg");
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: cover;
+  background-position: center;
 }
 
 section.section-cast div.bg-overlay {
-  height: 84.3vh;
-  /* fix this */
+  height: 100vh;
+  min-height: 680px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-cast div.bg-overlay ul {
@@ -258,7 +264,6 @@ section.section-cast div.bg-overlay {
   justify-content: space-between;
   padding: 70px;
   margin-top: 100px;
-  /* replace margins */
 }
 .section-cast div.bg-overlay ul li {
   display: inherit;
@@ -271,11 +276,8 @@ section.section-cast div.bg-overlay ul li a {
 
 section.section-cast div.bg-overlay ul li a img {
   height: 50vh;
-  /* width: 100%; */
-  /* When the browser window gets wider than 
-  1500px the distance between crew images must be 
-  proportionally enlarged (Hint: use flexbox module to 
-  implement this). */
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .section-cast div.bg-overlay h4.text-center.upper {
@@ -283,28 +285,23 @@ section.section-cast div.bg-overlay ul li a img {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 65px;
-  /* fix this janky thing */
+  margin-top: 20px;
 }
 
 .section-cast div.bg-overlay span.line {
-  position: absolute;
-  top: 10%;
-  top: 5%;
-  left: 49%;
-  right: 50%;
+  margin-top: 80px;
   width: 40px;
   border: 1px solid white;
-  margin-bottom: 5px;
-  /* fix this janky solution*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a div.cast-head {
   color: #ffffffcc;
-  font-size: 14px;
+  font-size: 19px;
   background-color: #f2d51acc;
-  height: 4%;
-  width: 20%;
+  height: 25px;
+  width: 70px;
   text-align: center;
   padding-top: 5px;
   position: absolute;
@@ -317,8 +314,7 @@ a div.cast-head {
   text-align: center;
   text-transform: uppercase;
   padding: 15px;
-  height: 10%;
-  width: 88.5%;
+  height: 50px;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -326,13 +322,14 @@ a div.cast-head {
 }
 
 section.section-cast div.bg-overlay ul li a:hover div.cast-text {
-  background-color: #f2d51acc;
+  background-color: #f2d51a;
 }
 
 .cast-text h5 {
   font-size: 18px;
   font-weight: bold;
   color: #2a2a2a;
+  margin-bottom: 15px;
 }
 
 section.section-cast div.bg-overlay ul li a:hover div.cast-text h5 {
@@ -356,7 +353,7 @@ section.section-trailer.text-center {
   height: 100vh;
   min-height: 950px;
   position: relative;
-  margin: 20px;
+  padding: 20px;
 }
 
 section.section-trailer.text-center h2.upper {
@@ -431,7 +428,6 @@ section.section-tickets.text-center div.bg-overlay span.line {
   border: 1px solid white;
   width: 20px;
   margin-bottom: 15px;
-  /* jancky */
 }
 
 section.section-tickets.text-center div.bg-overlay a:hover {
