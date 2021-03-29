@@ -294,7 +294,6 @@ section.section-cast div.bg-overlay ul li a img {
   left: 49%;
   right: 50%;
   width: 40px;
-  color: red;
   border: 1px solid white;
   margin-bottom: 5px;
   /* fix this janky solution*/
@@ -326,16 +325,17 @@ a div.cast-head {
   right: 0;
 }
 
-.cast-text:hover {
+section.section-cast div.bg-overlay ul li a:hover div.cast-text {
   background-color: #f2d51acc;
 }
+
 .cast-text h5 {
   font-size: 18px;
   font-weight: bold;
   color: #2a2a2a;
 }
 
-.cast-text h5:hover {
+section.section-cast div.bg-overlay ul li a:hover div.cast-text h5 {
   color: #ffffff;
 }
 
@@ -344,17 +344,15 @@ a div.cast-head {
   color: #848484cc;
 }
 
-.cast-text p:hover {
-  opacity: 100%;
+section.section-cast div.bg-overlay ul li a:hover div.cast-text p {
+  color: #848484;
 }
-
-/* make them all work at once */
 
 section.section-cast div.bg-overlay ul li a {
   text-decoration: none;
 }
 
-section.section-trailer text-center {
+section.section-trailer.text-center {
   height: 100vh;
   min-height: 950px;
   position: relative;
@@ -379,11 +377,6 @@ section.section-trailer.text-center ul li ul {
   flex-direction: column;
 }
 
-/* section.section-trailer.text-center ul li iframe {
-  /* make it better */
-/* width: 300px; */
-/* } */
-
 section.section-trailer.text-center ul li ul li {
   margin-bottom: 10px;
   margin-right: 15px;
@@ -396,7 +389,6 @@ section.section-trailer.text-center ul li ul li a {
 }
 
 section.section-tickets.text-center {
-  height: 20vh;
   background-image: url("/images/cinema.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -405,28 +397,46 @@ section.section-tickets.text-center {
 }
 
 section.section-tickets.text-center div.bg-overlay {
-  background-color: #0e022380;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  /* fix this */
+  background-color: #0e022380;
+  height: 20vh;
 }
 
-h4.text-center-upper {
+h4.text-center.upper {
   color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 section.section-tickets.text-center div.bg-overlay a {
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: #f2d51acc;
   border: 2px solid #ffffff;
   border-radius: 32px;
-  padding: 5px 10px 5px 10px;
+  padding: 10px 10px 5px 10px;
+  margin-top: 25px;
+  height: 8%;
+  width: 7%;
 }
 
-/* section.section-tickets.text-center div.bg-overlay a:hover {
-  opacity: 100%;
-} */
+section.section-tickets.text-center div.bg-overlay span.line {
+  color: #ffffff;
+  border: 1px solid white;
+  width: 20px;
+  margin-bottom: 15px;
+  /* jancky */
+}
+
+section.section-tickets.text-center div.bg-overlay a:hover {
+  background-color: #f2d51a;
+}
 
 .section-footer ul {
   display: flex;
