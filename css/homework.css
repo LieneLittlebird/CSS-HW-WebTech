@@ -150,12 +150,9 @@ section.header div.bg-overlay {
   position: relative;
 }
 
-section.header div.title {
-  margin: 30px 30px 70px 30px;
-}
-
 section.header div.title h1 {
   font-size: 72px;
+  margin: 30px 30px 80px 30px;
 }
 
 .meta {
@@ -165,20 +162,19 @@ section.header div.title h1 {
 
 .meta ul {
   display: flex;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 .meta ul li {
-  display: flex;
+  display: inherit;
   justify-content: center;
   align-items: center;
   border: 2px solid #ffffff;
   border-radius: 24px;
   font-size: 14px;
   width: max-content;
-  height: 35px;
+  height: 38px;
   padding-right: 7px;
   margin: 6px;
-  /* Replace margins with other */
 }
 .meta ul li span {
   display: inherit;
@@ -189,10 +185,9 @@ section.header div.title h1 {
   background-color: #f2d51acc;
   border-radius: 24px;
   margin-right: 5px;
-  /* Replace margins with other */
   padding: 2px;
-  height: 35px;
-  width: 35px;
+  height: 38px;
+  width: 40px;
 }
 
 .social {
@@ -220,7 +215,7 @@ section.header div.title h1 {
   opacity: 100%;
 }
 section.section-summary {
-  padding: 4em;
+  padding: 64px;
 }
 
 h2.text-center.upper {
@@ -253,10 +248,25 @@ section.section-cast {
 
 section.section-cast div.bg-overlay {
   height: 100vh;
-  min-height: 680px;
-  position: relative;
+  min-height: inherit;
   display: flex;
   flex-direction: column;
+}
+
+.section-cast div.bg-overlay span.line {
+  width: 40px;
+  border: 1px solid white;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-cast div.bg-overlay h4.text-center.upper {
+  font-size: 42px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
 .section-cast div.bg-overlay ul {
@@ -280,33 +290,17 @@ section.section-cast div.bg-overlay ul li a img {
   object-fit: cover;
 }
 
-.section-cast div.bg-overlay h4.text-center.upper {
-  font-size: 42px;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 20px;
-}
-
-.section-cast div.bg-overlay span.line {
-  margin-top: 80px;
-  width: 40px;
-  border: 1px solid white;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 a div.cast-head {
-  color: #ffffffcc;
-  font-size: 19px;
-  background-color: #f2d51acc;
-  height: 25px;
-  width: 70px;
-  text-align: center;
-  padding-top: 5px;
   position: absolute;
   top: 8px;
   left: 8px;
+  color: #ffffffcc;
+  background-color: #f2d51acc;
+  font-size: 19px;
+  text-align: center;
+  height: 25px;
+  width: 70px;
+  padding-top: 5px;
 }
 
 .cast-text {
@@ -391,6 +385,7 @@ section.section-tickets.text-center {
   background-size: cover;
   overflow: hidden;
   position: relative;
+  height: 22vh;
 }
 
 section.section-tickets.text-center div.bg-overlay {
@@ -399,7 +394,17 @@ section.section-tickets.text-center div.bg-overlay {
   align-items: center;
   justify-content: center;
   background-color: #0e022380;
-  height: 20vh;
+  height: 22vh;
+}
+
+section.section-tickets.text-center div.bg-overlay span.line {
+  color: #ffffff;
+  border: 1px solid white;
+  width: 20px;
+  margin-top: -49px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
 }
 
 h4.text-center.upper {
@@ -407,27 +412,22 @@ h4.text-center.upper {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
+  padding-bottom: 34px;
 }
 
 section.section-tickets.text-center div.bg-overlay a {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #f2d51acc;
   border: 2px solid #ffffff;
   border-radius: 32px;
-  padding: 10px 10px 5px 10px;
-  margin-top: 25px;
-  height: 8%;
-  width: 7%;
-}
-
-section.section-tickets.text-center div.bg-overlay span.line {
-  color: #ffffff;
-  border: 1px solid white;
-  width: 20px;
-  margin-bottom: 15px;
+  border-radius: 32px;
+  height: 42px;
+  width: 147px;
 }
 
 section.section-tickets.text-center div.bg-overlay a:hover {
