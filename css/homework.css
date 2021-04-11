@@ -130,7 +130,7 @@ ul li.upper-menu.right a.btn:hover {
 section.header {
   height: 100vh;
   width: 100%;
-  background-image: url("/images/topimage.jpeg");
+  background-image: url("../images/topimage.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -239,7 +239,7 @@ section.section-summary p span {
 section.section-cast {
   height: 100vh;
   min-height: 680px;
-  background-image: url("/images/car.jpg");
+  background-image: url("../images/car.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -396,7 +396,7 @@ section.section-trailer.text-center ul li ul li a {
 }
 
 section.section-tickets.text-center {
-  background-image: url("/images/cinema.png");
+  background-image: url("../images/cinema.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
